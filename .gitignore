@@ -1,0 +1,16 @@
+node_modules/
+client/dist/
+data/*
+!data/.gitkeep
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+backups/
+.env
+
+# Backups contain your financial data in plain text. NEVER commit them.
+flowmoney-backup-*.json
+before-restore-*.json
+before-erase-*.json
+*backup*.json
+.DS_Store

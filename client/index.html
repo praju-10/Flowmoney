@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#070c18" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="FlowMoney — private personal finance. Your data stays on this device." />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="FlowMoney" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <title>FlowMoney — Personal Finance</title>
+    <script>
+      // Marks phones so the compact phone layout applies ONLY there. Desktop and tablets are untouched.
+      (function () {
+        var q = '(max-width: 650px), (pointer: coarse) and (max-height: 500px)';
+        var mq = window.matchMedia(q);
+        function set() { document.documentElement.toggleAttribute('data-phone', mq.matches); }
+        set();
+        if (mq.addEventListener) mq.addEventListener('change', set); else mq.addListener(set);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

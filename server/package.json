@@ -1,0 +1,20 @@
+{
+  "name": "flowmoney-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test tests/*.test.js",
+    "export-data": "node scripts/export-data.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "zod": "^3.23.8"
+  },
+  "optionalDependencies": {
+    "better-sqlite3": "^13.0.3"
+  }
+}
